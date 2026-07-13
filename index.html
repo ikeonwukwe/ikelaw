@@ -104,11 +104,12 @@ body{font-family:"Inter",sans-serif;color:var(--dark);background:var(--off);font
 
 /* ── NAV ── */
 nav{position:fixed;top:0;left:0;right:0;z-index:300;background:var(--charcoal);border-bottom:1px solid rgba(255,255,255,0.08)}
-.nav-inner{max-width:1260px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:82px}
-.nav-logo{display:flex;align-items:center;gap:16px;text-decoration:none;flex-shrink:0}
-.nav-logo img{height:66px;width:auto;border-radius:12px}
+.nav-inner{max-width:1260px;margin:0 auto;padding:10px 2rem;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{display:flex;align-items:flex-start;gap:24px;text-decoration:none;flex-shrink:0}
+.nav-logo img{height:100px;width:100px;border-radius:12px}
 .nav-logo-name{font-family:"Playfair Display",serif;font-size:20px;color:var(--white);font-weight:700;line-height:1.2;white-space:nowrap}
-.nav-logo-sub{display:block;font-size:10px;color:var(--gold);font-weight:500;letter-spacing:.16em;text-transform:uppercase;margin-top:3px}
+.nav-logo-sub{display:block;font-size:15px;color:var(--gold);letter-spacing:.16em;text-transform:uppercase;margin-top:4px;white-space:nowrap}
+.nav-logo-tag{display:block;font-family:"Inter",sans-serif;font-size:12px;color:rgba(255,255,255,.65);font-weight:600;letter-spacing:.03em;margin-top:3px;white-space:nowrap}
 .nav-links{display:flex;align-items:center;gap:2rem}
 .nav-links a{color:rgba(255,255,255,.65);text-decoration:none;font-size:13.5px;transition:color .2s;white-space:nowrap}
 .nav-links a:hover{color:var(--white)}
@@ -123,9 +124,10 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:var(--charcoal);b
 .mobile-menu a{color:rgba(255,255,255,.75);text-decoration:none;padding:13px 2rem;font-size:15px;border-bottom:1px solid rgba(255,255,255,.05);display:block}
 .mobile-menu a.mcta{background:var(--gold);color:var(--black);font-weight:600;text-align:center;border:none;margin:1rem 1.5rem .5rem;border-radius:var(--radius)}
 @media(max-width:860px){.nav-links{display:none}.hamburger{display:flex}.mobile-menu.open{display:flex}}
+@media(max-width:480px){.nav-logo img{height:64px;width:64px}.nav-logo-sub{font-size:11px;white-space:normal;margin-top:3px}.nav-logo-tag{font-size:10px}}
 
 /* ── HERO ── */
-.hero{min-height:100vh;background:#3C3C3C;display:flex;align-items:center;padding-top:82px;position:relative;overflow:hidden}
+.hero{min-height:100vh;background:#3C3C3C;display:flex;align-items:center;padding-top:120px;position:relative;overflow:hidden}
 .hero-rule{position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent 0%,var(--gold) 40%,var(--gold-light) 70%,transparent 100%)}
 .hero-inner{max-width:1100px;margin:0 auto;padding:5rem 2rem;position:relative;z-index:1}
 .hero-eyebrow{font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);font-weight:500;margin-bottom:1.25rem;display:flex;align-items:center;gap:10px}
@@ -242,10 +244,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:300;background:var(--charcoal);b
 footer{background:var(--black);padding:4rem 2rem 2rem;border-top:1px solid rgba(255,255,255,.05)}
 .footer-inner{max-width:1200px;margin:0 auto}
 .footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
-.footer-brand-logo{display:flex;align-items:center;justify-content:flex-start;gap:16px;margin-bottom:1.1rem}
-.footer-brand-logo img{height:72px;width:auto;border-radius:12px}
+.footer-brand-logo{display:flex;align-items:flex-start;justify-content:flex-start;gap:24px;margin-bottom:1.1rem}
+.footer-brand-logo img{height:100px;width:100px;border-radius:12px}
 .footer-brand-name{font-family:"Playfair Display",serif;font-size:18px;color:var(--white);font-weight:700;line-height:1.25}
-.footer-brand-sub{font-size:10px;color:var(--gold);letter-spacing:.14em;text-transform:uppercase;display:block;margin-top:3px}
+.footer-brand-sub{font-size:15px;color:var(--gold);letter-spacing:.16em;text-transform:uppercase;display:block;margin-top:4px}
+.footer-brand-tag{display:block;font-family:"Inter",sans-serif;font-size:12px;color:rgba(255,255,255,.65);font-weight:600;letter-spacing:.03em;margin-top:3px}
 .footer-brand p{font-size:13px;color:rgba(255,255,255,.35);line-height:1.7;max-width:270px}
 .fc-h{font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.38);font-weight:500;margin-bottom:.9rem}
 .footer-col ul{list-style:none}
@@ -269,8 +272,8 @@ body.modal-open{overflow:hidden}
     <a href="#home" class="nav-logo" aria-label="Ike Law — Law Office of Ike Onwukwe">
       <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDAwIDQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgcng9IjY0IiBmaWxsPSIjMkUyRTJFIi8+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzhBODRCIiBzdHJva2Utd2lkdGg9IjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGxpbmUgeDE9IjIwMCIgeTE9Ijk1IiB4Mj0iMjAwIiB5Mj0iMjU1Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjE1MCIgeDI9IjI3MCIgeTI9IjE1MCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIxNTAiIHgyPSIxMzAiIHkyPSIxODIiLz48bGluZSB4MT0iMjcwIiB5MT0iMTUwIiB4Mj0iMjcwIiB5Mj0iMTgyIi8+PGNpcmNsZSBjeD0iMTMwIiBjeT0iMjA2IiByPSIyNiIvPjxjaXJjbGUgY3g9IjI3MCIgY3k9IjIwNiIgcj0iMjYiLz48bGluZSB4MT0iMTYwIiB5MT0iMjcyIiB4Mj0iMjQwIiB5Mj0iMjcyIi8+PC9nPjx0ZXh0IHg9IjIwMCIgeT0iMzMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zaXplPSI0MiIgbGV0dGVyLXNwYWNpbmc9IjYiIGZpbGw9IiNDOEE4NEIiPklLRSBMQVc8L3RleHQ+PC9zdmc+Cg==" alt="Ike Law Scales of Justice logo">
       <div>
-        <div class="nav-logo-name">Ike Law</div>
         <span class="nav-logo-sub">Law Office of Ike Onwukwe</span>
+        <span class="nav-logo-tag">Immigration Law</span>
       </div>
     </a>
     <div class="nav-links">
@@ -417,8 +420,8 @@ body.modal-open{overflow:hidden}
       </div>
 
       <div class="flip-card-front" onclick="openPanel('corporate')" role="button" tabindex="0" onkeydown="if(event.key==='Enter'||event.key===' ')openPanel('corporate')">
-        <span class="flip-img" aria-hidden="true"><svg viewBox="0 0 300 96" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Corporate Immigration"><defs><linearGradient id="gCorpor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E2E2E"/><stop offset="1" stop-color="#414141"/></linearGradient></defs><rect width="300" height="96" rx="8" fill="url(#gCorpor)"/><g stroke="#C8A84B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="118" y="22" width="46" height="52" rx="3"/><path d="M128 34 h8 M146 34 h8 M128 46 h8 M146 46 h8 M128 58 h8 M146 58 h8"/><path d="M136 74 v-8 h10 v8"/></g><g stroke="#E0C97A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="192" cy="52" r="6"/><path d="M181 74 c0 -9 5 -14 11 -14 s11 5 11 14" opacity=".9"/><circle cx="216" cy="55" r="5" opacity=".7"/><path d="M207 74 c0 -8 4 -12 9 -12 s9 4 9 12" opacity=".7"/></g></svg></span>
-        <h3>Corporate &amp; Employer Immigration</h3>
+        <span class="flip-img" aria-hidden="true"><svg viewBox="0 0 300 96" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Business/Corporate Immigration"><defs><linearGradient id="gCorpor" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2E2E2E"/><stop offset="1" stop-color="#414141"/></linearGradient></defs><rect width="300" height="96" rx="8" fill="url(#gCorpor)"/><g stroke="#C8A84B" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="118" y="22" width="46" height="52" rx="3"/><path d="M128 34 h8 M146 34 h8 M128 46 h8 M146 46 h8 M128 58 h8 M146 58 h8"/><path d="M136 74 v-8 h10 v8"/></g><g stroke="#E0C97A" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cx="192" cy="52" r="6"/><path d="M181 74 c0 -9 5 -14 11 -14 s11 5 11 14" opacity=".9"/><circle cx="216" cy="55" r="5" opacity=".7"/><path d="M207 74 c0 -8 4 -12 9 -12 s9 4 9 12" opacity=".7"/></g></svg></span>
+        <h3>Business/Corporate Immigration</h3>
         <p>LMIA strategy, Global Talent Stream, employee mobility, and compliance support.</p>
         <div class="flip-hint">Tap to explore</div>
       </div>
@@ -482,7 +485,7 @@ body.modal-open{overflow:hidden}
             <option>Visitor Visa / TRV / Super Visa</option>
             <option>PR Card Renewal / PRTD</option>
             <option>Citizenship Application</option>
-            <option>Corporate / Employer Immigration</option>
+            <option>Business/Corporate Immigration</option>
             <option>Other / Not Sure</option>
           </select>
         </div>
@@ -536,8 +539,8 @@ body.modal-open{overflow:hidden}
         <div class="footer-brand-logo">
           <img src="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNDAwIDQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iNDAwIiBoZWlnaHQ9IjQwMCIgcng9IjY0IiBmaWxsPSIjMkUyRTJFIi8+PGcgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjQzhBODRCIiBzdHJva2Utd2lkdGg9IjkiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCI+PGxpbmUgeDE9IjIwMCIgeTE9Ijk1IiB4Mj0iMjAwIiB5Mj0iMjU1Ii8+PGxpbmUgeDE9IjEzMCIgeTE9IjE1MCIgeDI9IjI3MCIgeTI9IjE1MCIvPjxsaW5lIHgxPSIxMzAiIHkxPSIxNTAiIHgyPSIxMzAiIHkyPSIxODIiLz48bGluZSB4MT0iMjcwIiB5MT0iMTUwIiB4Mj0iMjcwIiB5Mj0iMTgyIi8+PGNpcmNsZSBjeD0iMTMwIiBjeT0iMjA2IiByPSIyNiIvPjxjaXJjbGUgY3g9IjI3MCIgY3k9IjIwNiIgcj0iMjYiLz48bGluZSB4MT0iMTYwIiB5MT0iMjcyIiB4Mj0iMjQwIiB5Mj0iMjcyIi8+PC9nPjx0ZXh0IHg9IjIwMCIgeT0iMzMwIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LWZhbWlseT0iQXJpYWwsIEhlbHZldGljYSwgc2Fucy1zZXJpZiIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zaXplPSI0MiIgbGV0dGVyLXNwYWNpbmc9IjYiIGZpbGw9IiNDOEE4NEIiPklLRSBMQVc8L3RleHQ+PC9zdmc+Cg==" alt="Ike Law logo">
           <div>
-            <div class="footer-brand-name">Ike Law</div>
             <span class="footer-brand-sub">Law Office of Ike Onwukwe</span>
+            <span class="footer-brand-tag">Immigration Law</span>
           </div>
         </div>
         <p>Law Office of Ike Onwukwe is a licensed Canadian immigration lawyer serving the Greater Toronto Area, St. Catharines, Niagara Falls, Welland, Hamilton, all of Ontario, and Canada-wide via virtual consultations. Licensed Member, Law Society of Ontario.</p>
@@ -690,7 +693,7 @@ var SERVICES = {
   },
   corporate:{
     icon:"🏢",
-    title:"Corporate &amp; Employer Immigration",
+    title:"Business/Corporate Immigration",
     lead:"Ike advises employers on Canadian immigration law and its impact on workforce planning, employee mobility, and compliance. That strategic, business-oriented perspective is what sets this practice apart for companies of all sizes — from growing startups to established multinationals.",
     sections:[
       {h:"Employer Services",items:["LMIA strategy and application management","Global Talent Stream (fast-track for qualifying tech and research roles)","Employee mobility programs and intra-company transfer applications","LMIA exemptions and International Mobility Program (IMP) streams","Employer Compliance Inspection support and audit response","Immigration policy briefings — impact on hiring, onboarding, and HR","Business visitor support packages for cross-border activities"]},
